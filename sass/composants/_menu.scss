@@ -1,15 +1,15 @@
-.menu {
-    ul {
+/* /////////////////////////////////////////// menu principal */
+    .menu {
       margin: 0;
       padding: 0;
       list-style-type: none;
-      li {
-        display: inline-block;
-  
-        a {
-          color: #333;
-          text-decoration: none;
+        &__li {
+          display: inline-block;
+        }
+        &__a {
+            color: #333;
+            text-decoration: none;
+            padding : 2px 5px;
         }
       }
-    }
-  }
+    
