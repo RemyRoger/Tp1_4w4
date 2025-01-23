@@ -72,6 +72,11 @@ Le composant .carte
   background-color: #0056b3;
 }
 
+.global {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
 .hero {
   min-height: 100vh;
   background-image: url("images/maldives.jpg");
