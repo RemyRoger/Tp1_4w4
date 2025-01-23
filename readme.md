@@ -3,3 +3,5 @@
 
 Créer une page d'accueil en utilisant le standard BEM et Sass pour reproduire le contenu de maquette.
 Auteur: Eddy Martin
+
+Github Page : https://remyroger.github.io/Tp1/
