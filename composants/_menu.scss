@@ -1,5 +1,12 @@
 /* /////////////////////////////////////////// menu principal */
     .menu {
+      flex: 1 1 50%;
+      display: flex;
+      justify-content: flex-end;
+      @media screen and (max-width:$point__rupture){
+        flex-direction: column;
+      }
+      flex-direction: row;
       margin: 0;
       padding: 0;
       list-style-type: none;

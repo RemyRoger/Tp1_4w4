@@ -16,6 +16,7 @@ Text Domain: 4w4-eddy
 Les Variables
 //////////////////////// */
 @import "variables/couleurs";
+@import "variables/dimensions";
 
 /* /////////////////////////
 Les composants
@@ -30,3 +31,7 @@ Layout
 @import "layout/principal";
 @import "layout/entete";
 @import "layout/footer";
+/* /////////////////////////
+Base 
+/////////////////////////// */
+@import "base/lien.scss";
