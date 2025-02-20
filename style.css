@@ -113,39 +113,31 @@ Le composant .carte
 
 .recherche {
   display: flex;
-  align-items: center;
-  font-size: 1.2rem;
+  height: 1.6rem;
+  width: 14rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .recherche__input {
-  flex: 1;
-  height: 1.8rem;
   border: none;
   outline: none;
-  background-color: rgba(0, 0, 0, 0.02);
-  border-right: 1px dotted rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.01);
+  flex: 1 0 auto;
+  padding: 3px;
 }
 .recherche__input:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
+.recherche__input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.2);
+  font-style: italic;
+}
+.recherche__input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+  font-style: italic;
+}
 .recherche__img {
   flex: 0 0 20px;
-  padding: 0 3px;
-}
-.recherche .recherche__input::-moz-placeholder {
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  font-style: italic;
-}
-.recherche .recherche__input::placeholder {
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  font-style: italic;
-}
-@media screen and (max-width: 800px) {
-  .recherche {
-    display: none;
-  }
+  padding: 3px;
 }
 
 /* /////////////////////////
