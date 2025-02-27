@@ -98,8 +98,12 @@
         <div class="global">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <article class="populaire__article">
+                    <?php 
+                    if (has_post_thumbnail()) {
+                        the_post_thumbnail('thumbnail'); } 
+                        ?>
                     <h2 class="populaire__titre"><?php the_title(); ?></h2>
-                    <div class="pouplaire__contenu"><?php echo wp_trim_words(get_the_content(), 20, "..."); ?></div>
+                    <div class="pouplaire__contenu"><?php the_content(); ?></div>
                 </article>
             <?php endwhile; endif; ?>
         </div>
