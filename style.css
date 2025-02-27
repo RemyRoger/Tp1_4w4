@@ -1,16 +1,16 @@
 @charset "UTF-8";
 /*
-Theme Name: 4W4 - Johnny Tan
-Theme URI: https://github.com/BestExplosion
+Theme Name: 4W4 - Remy Roger
+Theme URI: https://github.com/RemyRoger/
 Author: Eddy Martin
-Author URI: https://github.com/BestExplosion
+Author URI: https://github.com/RemyRoger/
 Description: Thème de base développer dans le cadre du cours 4W4
 Version: 1.0
 Tested up to: 6.2
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: 4w4-johnny
+Text Domain: 4w4-remy
 */
 /* /////////////////////
 Les Variables
@@ -306,4 +306,35 @@ form {
     right: 0;
     background-color: #fff;
   }
+}
+
+/*
+  --------------------------------- Layout du pied de page
+*/
+footer {
+  background-color: rgb(236, 136, 13);
+  color: #000;
+}
+
+.piedpage {
+  display: flex;
+  flex-direction: column;
+}
+.piedpage__s1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.piedpage__s1__externe {
+  flex: 0 0 20%;
+}
+.piedpage__s1__externe .menu {
+  display: flex;
+  flex-direction: column;
+}
+.piedpage__s1__adresse {
+  flex: 0 0 40%;
+}
+.piedpage__s1__description {
+  flex: 1 0 400px;
 }/*# sourceMappingURL=style.css.map */
