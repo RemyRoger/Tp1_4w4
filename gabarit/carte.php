@@ -3,7 +3,7 @@
 ?>
 
 
-<article class="carte caarte--grande">
+<article class="carte carte--grande">
                      <figure class="carte__image">
                         <img src="images/img1.jpg" alt="Image de voyage">
                     </figure>
