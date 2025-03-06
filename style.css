@@ -18,14 +18,6 @@ Les Variables
 /* /////////////////////
 Bases
 //////////////////////// */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-p {
-  font-weight: bold;
-}
-
 a {
   color: #5a5;
   text-decoration: none;
@@ -37,30 +29,27 @@ a:visited {
   color: rgba(0, 0, 0, 0.3);
 }
 a:focus {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 /* /////////////////////////
 Les composants
 /////////////////////////// */
-/* /////////////////////////////////////////// menu principal */
+/* ----------------------------------------- .menu */
 .menu {
-  flex: 1 1 50%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  margin: 0;
-  padding: 0;
   list-style-type: none;
+  gap: 10px 0;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .menu {
     flex-direction: column;
-    gap: 6px 0;
   }
 }
 .menu-item a {
-  padding: 2px 5px;
+  text-decoration: none;
+  padding: 4px;
 }
 
 /* *******************
@@ -70,8 +59,10 @@ Le composant .carte
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 8px;
-  flex: 1 1 220px .carte --grande;
-  flex-padding: 40px;
+  flex: 1 1 220px;
+}
+.carte--grande {
+  padding: 40px;
 }
 .carte--petite {
   padding: 20px;
@@ -139,8 +130,7 @@ Le composant .carte
 Layout
 /////////////////////////// */
 .global {
-  margin: 0 auto;
-  max-width: 1000px;
+  padding: 10vh 2vw;
 }
 
 .hero {
@@ -148,17 +138,116 @@ Layout
   background-image: url("images/maldives.jpg");
 }
 
+.hero__titre {
+  text-shadow: 3px 3px 5px rgb(41, 155, 102);
+}
+
+.hero__bouton {
+  background-color: rgb(129, 243, 237);
+  border: 2px solid cyan;
+  padding: 10px 20px;
+  color: black;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero__icone-app {
+  margin-top: 10px;
+}
+
 .boiteflex {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
   gap: 10px;
 }
 
+.formulaire {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.495);
+  width: 75vw;
+  height: auto;
+  min-height: 100px;
+  bottom: 5vh;
+  padding: 10px;
+}
+
+.form__formulaire,
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+form {
+  flex-wrap: wrap;
+}
+
+.formulaire__input,
+.formulaire__button {
+  border: 2px solid #31bcfd;
+}
+
+.formulaire__input {
+  height: 2rem;
+}
+
+.formulaire__button {
+  width: 150px;
+  height: 2.5rem;
+  margin-top: 18px;
+}
+
+.galerie {
+  display: flex;
+  flex-direction: column;
+}
+
+.galerie__img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.galerie__destinations {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.galerie__fig {
+  width: 300px;
+  height: 300px;
+  padding: 2px;
+  margin: 2px;
+  position: relative;
+}
+
+.galerie h2 {
+  margin-left: 120px;
+}
+
+@media screen and (max-width: 800px) {
+  .formulaire {
+    display: none;
+  }
+  .galerie {
+    display: none;
+  }
+}
 .burger {
   display: none;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
   .burger {
     display: block;
     position: absolute;
@@ -190,12 +279,13 @@ Layout
   gap: 0 40px;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
   .entete__nav {
     display: none;
     flex-direction: column;
-    height: 52vh;
+    height: 50vh;
     width: 100vw;
+    gap: 30px 0;
     padding-bottom: 20px;
     gap: 30px 0;
     position: absolute;
