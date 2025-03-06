@@ -56,13 +56,19 @@ Les composants
 Le composant .carte
 ********************** */
 .carte {
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 8px;
-  flex: 1 1 220px;
+  margin-bottom: 20px;
 }
 .carte--grande {
-  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 15px;
+  width: 100%;
+  max-width: 300px;
+  max-height: 600px;
+  height: 100%;
+  border: 5px solid #ddd;
+  border-radius: 8px;
 }
 .carte--petite {
   padding: 20px;
@@ -159,9 +165,8 @@ Layout
 .boiteflex {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 10px;
+  gap: 20px;
+  justify-content: center;
 }
 
 .formulaire {
