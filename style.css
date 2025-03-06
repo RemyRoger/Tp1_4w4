@@ -18,6 +18,10 @@ Les Variables
 /* /////////////////////
 Bases
 //////////////////////// */
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
 a {
   color: #5a5;
   text-decoration: none;
@@ -118,10 +122,6 @@ Le composant .carte
 }
 .recherche__input:hover {
   background-color: rgba(0, 0, 0, 0.05);
-}
-.recherche__input::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.2);
-  font-style: italic;
 }
 .recherche__input::placeholder {
   color: rgba(0, 0, 0, 0.2);
