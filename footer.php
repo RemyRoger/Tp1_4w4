@@ -1,4 +1,5 @@
 <footer>
+    <?php $hero_mission = get_theme_mod('hero_mission', 'Default Title'); ?>
     <div class="piedpage global">
         <section class="piedpage__s1">
             <div class="piedpage__s1__externe">
@@ -16,7 +17,7 @@
                 </div>
             </div>
             <div class="piedpage__s1__description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat vero explicabo iure sit enim, ea ducimus nesciunt inventore impedit blanditiis unde omnis facere, deleniti eligendi fuga molestias dolor eveniet laborum!
+               <?php echo $footer_mission ?>
             </div>
         </section>
         <section class="piedpage__s2"></section>
