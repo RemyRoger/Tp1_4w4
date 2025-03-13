@@ -21,7 +21,7 @@
             <div class="entete__nav">
 
             <?php wp_nav_menu(array(
-                'menu'  => 'principal',
+                'menu'  => 'principale  ',
 		        'container'  => 'div',
 		        'container_class'=> '',
             )); ?>

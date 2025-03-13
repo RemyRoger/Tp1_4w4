@@ -28,7 +28,7 @@
                 <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=<?php echo $couleur ?>" width="20" height="20">
         <section class="piedpage__s3"></section>
         <?php wp_nav_menu(array(
-                'menu'  => 'principal',
+                'menu'  => 'principale',
 		        'container'  => 'div',
 		        'container_class'=> '',
             )); ?>
