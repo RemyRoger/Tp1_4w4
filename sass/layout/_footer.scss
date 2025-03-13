@@ -1,10 +1,9 @@
-/*
-  --------------------------------- Layout du pied de page
+--------------------------------- Layout du pied de page
 */
 
 footer{
-    background-color: rgb(236, 136, 13);
-    color : #000;
+    background-color: rgb(236, 136, 13); // devrait devenir une variable de couleur
+    color : #000;  // variable !!
   }
   
   .piedpage{
@@ -29,7 +28,7 @@ footer{
               &__recherche{}
           }
           &__description{
-              flex:1 0 400px;
+              flex:1 0 300px;
           }
       }
   }
