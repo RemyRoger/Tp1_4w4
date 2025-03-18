@@ -18,6 +18,5 @@
         <p>Température maximum :<?php echo the_field("temperature_maximum"); ?>°C</p>
         <p>Température minimum :<?php echo the_field("temperature_minimum"); ?>°C</p>
     </div>
-    <h2 class="populaire__titre"><?php the_title(); ?></h2>
-    <div class="pouplaire__contenu"><?php echo wp_trim_words(get_the_content(), 20, "..."); ?></div>
+
 </article>
