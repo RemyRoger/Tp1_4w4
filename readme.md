@@ -4,4 +4,4 @@
 Créer une page d'accueil en utilisant le standard BEM et Sass pour reproduire le contenu de maquette.
 Auteur: Rémy Roger
 ## Github-page: https://remyroger.github.io/Tp1_4w4/
-## Lien vers WHC: https://gftnth00.mywhc.ca/4w4_32/
+## Lien vers WHC: https://gftnth00.mywhc.ca/4w4_49/

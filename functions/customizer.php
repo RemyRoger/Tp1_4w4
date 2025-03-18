@@ -53,7 +53,7 @@ $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'hero_i
   'label' => __('Couleur du texte', 'theme_31w'),
   'section' => 'hero_section',
 )));
- /**Champ adresse */
+ ////////////////////////Champ adresse/////////////////////////////
  $wp_customize->add_setting('footer_adresse', array(
   'default' => __('Adresse', 'theme_31w'),
   'sanitize_callback' => 'sanitize_text_field'
@@ -64,17 +64,17 @@ $wp_customize->add_control('footer_adresse', array(
   'section' => 'footer_section',
   'type' => 'text',
 ));
-  /**Champ telephone */
-  $wp_customize->add_setting('footer_telephone', array(
-      'default' => __('Telephone', 'theme_31w'),
-      'sanitize_callback' => 'sanitize_text_field'
-    ));
-    
-    $wp_customize->add_control('footer_telephone', array(
-      'label' => __('Telephone', 'theme_31w'),
-      'section' => 'footer_section',
-      'type' => 'text',
-    ));
+  ///////////////////////////Champ telephone///////////////////////////
+$wp_customize->add_setting('footer_telephone', array(
+  'default' => __('Telephone', 'theme_31w'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+  
+  $wp_customize->add_control('footer_telephone', array(
+  'label' => __('Telephone', 'theme_31w'),
+  'section' => 'footer_section',
+  'type' => 'text',
+));
 
 }
 
