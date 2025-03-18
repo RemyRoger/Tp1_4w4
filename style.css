@@ -60,6 +60,7 @@ Les composants
 Le composant .carte
 ********************** */
 .carte {
+  background-color: rgb(254, 255, 227);
   margin-bottom: 20px;
 }
 .carte--grande {
@@ -104,32 +105,29 @@ Le composant .carte
   background-color: #0056b3;
 }
 .carte__bouton:hover {
-  background-color: #0056b3;
+  background-color: #aed6ff;
 }
 
 .recherche {
   display: flex;
-  height: 1.6rem;
-  width: 14rem;
+  align-items: center;
+  font-size: 1.2rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .recherche__input {
+  flex: 1;
+  height: 1.8rem;
   border: none;
   outline: none;
-  background-color: rgba(0, 0, 0, 0.01);
-  flex: 1 0 auto;
-  padding: 3px;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-right: 1px dotted rgba(0, 0, 0, 0.2);
 }
 .recherche__input:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-.recherche__input::placeholder {
-  color: rgba(0, 0, 0, 0.2);
-  font-style: italic;
+  background-color: rgba(0, 0, 0, 0.06);
 }
 .recherche__img {
   flex: 0 0 20px;
-  padding: 3px;
+  padding: 0 3px;
 }
 
 /* /////////////////////////
@@ -271,6 +269,7 @@ form {
 }
 
 .entete {
+  background-color: #fff6e1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -301,7 +300,7 @@ form {
 }
 
 /*
-  --------------------------------- Layout du pied de page
+--------------------------------- Layout du pied de page
 */
 footer {
   background-color: rgb(236, 136, 13);
@@ -328,5 +327,5 @@ footer {
   flex: 0 0 40%;
 }
 .piedpage__s1__description {
-  flex: 1 0 400px;
+  flex: 1 0 300px;
 }/*# sourceMappingURL=style.css.map */
