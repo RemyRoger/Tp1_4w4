@@ -3,7 +3,7 @@ Le composant .carte
 ********************** */
 
 .carte {
-  background-color: rgb(254, 255, 227);
+  background-color: rgb(255, 241, 194);
   margin-bottom: 20px;
   
 
@@ -18,6 +18,7 @@ Le composant .carte
     height: 100%;
     border: 5px solid #ddd;
     border-radius: 8px;
+    
   }
   &--petite{
     padding: 20px;
