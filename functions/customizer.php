@@ -75,12 +75,12 @@ $wp_customize->add_setting('footer_telephone', array(
   'section' => 'footer_section',
   'type' => 'text',
 ));
-//////////////Page 404///////////////////
+///////////////////////////Page 404////////////////////////////////
 $wp_customize->add_section('erreur_section', array(
   'title' => __('Page 404', 'theme_31w'),
   'priority' => 30,
 ));
-/////////////Image 404///////////////////
+///////////////////////////Image 404/////////////////////////////////
 
 $wp_customize->add_setting('erreur_image', array(
   'default' => '',
@@ -91,7 +91,21 @@ $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'erreur
   'label' => __('Erreur Image', 'theme_31w'),
   'section' => 'erreur_section',
 )));
+/////////////////////////Titre 404//////////////////////////
+$wp_customize->add_section('erreur_section', array(
+  'title' => __('Page 404', 'theme_31w'),
+  'priority' => 30,
+));
+$wp_customize->add_setting('erreur_titre', array(
+'default' => __('Page Introuvable', 'theme_31w'),
+'sanitize_callback' => 'sanitize_text_field'
+));
 
+$wp_customize->add_control('erreur_titre', array(
+'label' => __('Titre', 'theme_31w'),
+'section' => 'erreur_section',
+'type' => 'text',
+));
 }
 
 
