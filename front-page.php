@@ -4,6 +4,7 @@
  * modèle front-page.php permet d'afficher la pae d'acceuil
  * 
  */
+
 ?>
 
 
