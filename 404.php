@@ -5,5 +5,10 @@
         <section class="erreur">
             <h1><?php echo $erreur_titre ?></h1>
             <img src="<?php echo $erreur_image ?>" alt="">
+            <?php wp_nav_menu(array(
+                'menu'  => 'Erreur  ',
+		        'container'  => 'div',
+		        'container_class'=> '',
+            )); ?>
     </div>
 <?php get_footer() ?>
