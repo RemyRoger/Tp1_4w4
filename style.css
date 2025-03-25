@@ -130,7 +130,7 @@ Le composant .carte
   padding: 0 3px;
 }
 
-.erreur {
+.erreur__section {
   display: flex;
   flex-direction: column;
 }
@@ -140,7 +140,7 @@ Le composant .carte
   height: 500px;
 }
 
-div {
+.erreur {
   display: flex;
   justify-content: center;
 }
@@ -295,7 +295,6 @@ form {
   position: static;
   flex-direction: row;
   align-items: center;
-  gap: 0 40px;
   flex-wrap: wrap;
 }
 @media screen and (max-width: 500px) {
