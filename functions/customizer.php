@@ -82,13 +82,13 @@ $wp_customize->add_section('erreur_section', array(
 ));
 /////////////Image 404///////////////////
 
-$wp_customize->add_setting('erreur_background', array(
+$wp_customize->add_setting('erreur_image', array(
   'default' => '',
   'sanitize_callback' => 'esc_url_raw',
 ));
 
-$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'erreur_background', array(
-  'label' => __('Erreur Background Image', 'theme_31w'),
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'erreur_image', array(
+  'label' => __('Erreur Image', 'theme_31w'),
   'section' => 'erreur_section',
 )));
 
