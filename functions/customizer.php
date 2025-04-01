@@ -106,6 +106,17 @@ $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'erreur
   'label' => __('Background Image', 'theme_31w'),
   'section' => 'erreur_section',
 )));
+//////////////////////Paragraphe Page 404///////////////////////////
+$wp_customize->add_setting('erreur_description', array(
+  'default' => __('Paragraphe', 'theme_31w'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+
+$wp_customize->add_control('erreur_description', array(
+  'label' => __('Paragraphe', 'theme_31w'),
+  'section' => 'erreur_section',
+  'type' => 'text',
+));
 ///////////////////couleur du texte de la page 404////////////////////////
 $wp_customize->add_setting('couleur_page404', array(
   'default' => '',
@@ -116,6 +127,7 @@ $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'couleu
   'label' => __('Couleur du texte', 'theme_31w'),
   'section' => 'erreur_section',
 )));
+
 }
 
 
