@@ -80,17 +80,7 @@ $wp_customize->add_section('erreur_section', array(
   'title' => __('Page 404', 'theme_31w'),
   'priority' => 30,
 ));
-///////////////////////////Image 404/////////////////////////////////
 
-$wp_customize->add_setting('erreur_image', array(
-  'default' => '',
-  'sanitize_callback' => 'esc_url_raw',
-));
-
-$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'erreur_image', array(
-  'label' => __('Erreur Image', 'theme_31w'),
-  'section' => 'erreur_section',
-)));
 /////////////////////////Titre 404//////////////////////////
 $wp_customize->add_section('erreur_section', array(
   'title' => __('Page 404', 'theme_31w'),
@@ -106,7 +96,28 @@ $wp_customize->add_control('erreur_titre', array(
 'section' => 'erreur_section',
 'type' => 'text',
 ));
+///////////////////////background Image 404////////////////////////////
+$wp_customize->add_setting('erreur_background', array(
+  'default' => '',
+  'sanitize_callback' => 'esc_url_raw',
+));
+
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'erreur_background', array(
+  'label' => __('Background Image', 'theme_31w'),
+  'section' => 'erreur_section',
+)));
+///////////////////couleur du texte de la page 404////////////////////////
+$wp_customize->add_setting('erreur_texte', array(
+  'default' => '',
+  'sanitize_callback' => 'esc_url_raw',
+));
+
+$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'erreur_texte', array(
+  'label' => __('Couleur du texte', 'theme_31w'),
+  'section' => 'erreur_section',
+)));
 }
+
 
 
 add_action('customize_register', 'theme_31w_customize_register');

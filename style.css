@@ -130,30 +130,6 @@ Le composant .carte
   padding: 0 3px;
 }
 
-.erreur__section {
-  display: flex;
-  flex-direction: column;
-}
-
-.erreur__image {
-  width: 500px;
-  height: 500px;
-}
-
-.erreur {
-  display: flex;
-  justify-content: center;
-}
-
-.retour__accueil {
-  font-size: 30px;
-}
-
-.erreur__titre {
-  font-size: 30px;
-  text-align: center;
-}
-
 /* /////////////////////////
 Layout
 /////////////////////////// */
