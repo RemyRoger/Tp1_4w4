@@ -23,7 +23,7 @@ body {
 }
 
 a {
-  color: #5a5;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 a:hover {
@@ -154,6 +154,18 @@ Le composant .carte
   background-color: rgba(128, 128, 128, 0.449);
   padding: 10px;
   text-align: center;
+}
+
+.retour__accueil {
+  font-size: 60px;
+  font-weight: bold;
+  background-color: #f7cc20;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.menu-erreur {
+  background-color: #f7cc20;
 }
 
 /* /////////////////////////
