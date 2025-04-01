@@ -183,6 +183,10 @@ Le composant .carte
   padding: 20px;
 }
 
+.erreur__recherche {
+  color: #f7cc20;
+}
+
 /* /////////////////////////
 Layout
 /////////////////////////// */

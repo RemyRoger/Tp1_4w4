@@ -25,7 +25,7 @@
                 )); ?>
             </div>
                 
-            <h2 class="erreur__recherche"><?php get_search_form(); ?></h2>
+            <div class="erreur__recherche"><?php get_search_form(); ?></div>
             
         </section>
     </div>
