@@ -130,6 +130,32 @@ Le composant .carte
   padding: 0 3px;
 }
 
+.erreur__titre {
+  font-size: 70px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  background-color: rgba(128, 128, 128, 0.449);
+  padding: 10px;
+}
+
+.erreur__section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  max-height: 900px;
+  justify-content: center;
+}
+
+.erreur__para {
+  width: 100%;
+  max-width: 800px;
+  background-color: rgba(128, 128, 128, 0.449);
+  padding: 10px;
+  text-align: center;
+}
+
 /* /////////////////////////
 Layout
 /////////////////////////// */
