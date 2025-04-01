@@ -35,5 +35,17 @@
     padding: 10px;
     border-radius: 10px;
     font-size: 25px;
+    
+}
+
+.erreur__div{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre tout horizontalement */
+    justify-content: center; /* Centre tout verticalement */
+    text-align: center;
+    background-size: cover; /* Ajuste l'image pour couvrir la div */
+    background-position: center; /* Centre l'image */
+    padding: 20px;
 }
 
