@@ -16,11 +16,14 @@
             <h1 class="erreur__titre"><?php echo $erreur_titre ?> </h1>
             <p class="erreur__para">Pas de panique, cher membre explorateur ! Vous avez dérivé un peu trop loin des destinations de rêve que notre club a soigneusement sélectionnées pour vous. Reprenez votre périple en cliquant sur 'Accueil' pour découvrir à nouveau nos voyages d’exception !</p>    
             <p class="retour__accueil"><a href="<?php echo home_url('/'); ?>">Retour à l'accueil</a></p>
+            <div class="menu__erreur">
             <?php wp_nav_menu(array(
                     "menu" => "erreur",
                     "container" => "",
                     "container_class" => "erreur__menu",
+                    
                 )); ?>
+            </div>
                 
             <h2 class="erreur__recherche"><?php get_search_form(); ?></h2>
             
