@@ -11,7 +11,15 @@
             console.log(li.dataset.id);
             categoryId = li.dataset.id;
             apiUrl = `${domaine}/wp-json/wp/v2/posts?categories=${categoryId}`;
-             mon_fetch(apiUrl);
+            
+            // Retire la classe 'selected' de tous les éléments
+            categorie__ul__li.forEach(item => item.classList.remove("selected"));
+    
+            // Ajoute la classe 'selected' à l'élément cliqué
+            li.classList.add("selected");
+    
+            // Appelle la fonction fetch
+            mon_fetch(apiUrl);
         });
     });
             

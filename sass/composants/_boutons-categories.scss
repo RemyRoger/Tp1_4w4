@@ -9,4 +9,10 @@
         padding: 3px;
         cursor: pointer;
     }
+    &__li:active{
+        background-color: rgba(93, 161, 255, 0.616);
+    }
+    &__li.selected{
+        background-color: rgba(93, 161, 255, 0.616);
+    }
 }

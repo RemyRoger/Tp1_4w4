@@ -199,6 +199,12 @@ Le composant .carte
   padding: 3px;
   cursor: pointer;
 }
+.categorie__ul__li:active {
+  background-color: rgba(93, 161, 255, 0.616);
+}
+.categorie__ul__li.selected {
+  background-color: rgba(93, 161, 255, 0.616);
+}
 
 /* /////////////////////////
 Layout
