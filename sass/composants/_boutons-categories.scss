@@ -1,0 +1,12 @@
+.categorie__ul{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    list-style: none;
+    &__li{
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 3px;
+        cursor: pointer;
+    }
+}
