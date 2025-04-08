@@ -15,7 +15,7 @@
     <div class="erreur__div" style="background-image: url('<?php echo $erreur_background ?>'); background-repeat : no-repeat; width: 100%; max-width: 100vw; height: 1080px; max-height: 100%" >
         <section class="erreur__section">
             <h1 class="erreur__titre"><?php echo $erreur_titre ?> </h1>
-            <p class="erreur__para"><?php echo $erreur_description ?>;</p>    
+            <p class="erreur__para"><?php echo $erreur_description ?></p>    
             <p class="retour__accueil"><a href="<?php echo home_url('/'); ?>">Retour à l'accueil</a></p>
             <div class="menu__erreur">
             <?php wp_nav_menu(array(

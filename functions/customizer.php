@@ -1,5 +1,7 @@
 <?php
+
 function theme_31w_customize_register($wp_customize) {
+
   // Le code pour ajouter des sections, des réglages et des contrôles ira ici.
   ////////////////////auteur///////////////////////////
   $wp_customize->add_section('hero_section', array(
