@@ -33,6 +33,14 @@ function mon_theme_supports() {
         '/js/destination.js'),
         true
     );
+    wp_enqueue_script(
+      'carrousel.js',
+      get_template_directory_uri() . '/js/carrousel.js',
+      array(),
+      filemtime(get_template_directory() . 
+      '/js/carrousel.js'),
+      true
+  );
 
   } 
   add_action('wp_enqueue_scripts', 'theme_tp_enqueue_styles');

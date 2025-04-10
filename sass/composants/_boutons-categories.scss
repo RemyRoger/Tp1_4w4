@@ -8,11 +8,13 @@
         border-radius: 5px;
         padding: 3px;
         cursor: pointer;
+        background-color: bisque;
     }
-    &__li:active{
-        background-color: rgba(93, 161, 255, 0.616);
-    }
+   
     &__li.selected{
         background-color: rgba(93, 161, 255, 0.616);
+    }
+    &__li:hover{
+        background-color: rgb(94, 136, 242);
     }
 }

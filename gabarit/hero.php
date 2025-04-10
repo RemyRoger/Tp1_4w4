@@ -1,5 +1,8 @@
 <?php $hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); ?>
-<?php $hero_background = get_theme_mod('hero_background', 'Default Title'); ?>
+<?php for ($k=0; $k<3; $k++ ){
+    $hero_background[$k] = get_theme_mod('hero_background_' . $k, 'Default Title');
+} ?>
+
 <?php $couleur = substr(get_theme_mod('hero_icone', '#fff') ,1 )?>
 <?php $couleur_texte = get_theme_mod('hero_icone', '#fff') ?>
 <style>
@@ -7,7 +10,13 @@
         color:  <?php echo $couleur_texte ?>;
     }
 </style>
-    <section class="hero" style="background-image: url('<?php echo $hero_background ?>'); background-repeat : no-repeat;">
+<!-- //////////////////////////Hero carroussel///////////////////////////////////-->
+    <section class="hero" >
+        <div class="hero__carroussel" style="background-image: url('<?php echo $hero_background[0] ?>')"></div>
+        <div class="hero__carroussel" style="background-image: url('<?php echo $hero_background[1] ?>')"></div>
+        <div class="hero__carroussel" style="background-image: url('<?php echo $hero_background[2] ?>')"></div>
+
+<!-- //////////////////////////Hero contenu///////////////////////////////////-->
         <div class="hero__contenu global">
             <h1 class="hero__titre">
                 <?php echo bloginfo('name') ?>
