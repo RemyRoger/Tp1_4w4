@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
    
 }
-.hero__carroussel{
+.hero__carrousel{
     position: absolute;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -11,6 +11,10 @@
     top: 0;
     left: 0;
     z-index: -1;
+    opacity: 0;
+    &--active{
+        opacity: 1;
+    }
     
 }
 .hero__titre{
@@ -28,4 +32,12 @@
 }
 .hero__icone-app{
     margin-top: 10px;
+}
+.hero__radio{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
 }
