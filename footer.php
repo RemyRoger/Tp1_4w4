@@ -1,12 +1,16 @@
+
 <footer>
     <?php
     $footer_mission = get_theme_mod('footer_mission', 'Default Title');
     $couleur = get_theme_mod('footer_adresse', 'Default Title');
     $footer_adresse = get_theme_mod('footer_adresse', 'Default Title');
     $footer_telephone = get_theme_mod('footer_telephone', 'Default Title');
+
+    vague($footer_couleur_arriere);
     
 
     ?>
+    
     <div class="piedpage global">
         <section class="piedpage__s1">
         <div class="piedpage__s1__externe">

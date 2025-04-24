@@ -207,6 +207,10 @@ Le composant .carte
   background-color: rgb(94, 136, 242);
 }
 
+.vague {
+  position: relative;
+}
+
 /* /////////////////////////
 Layout
 /////////////////////////// */
