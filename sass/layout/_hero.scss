@@ -1,47 +1,32 @@
-.hero{
+.hero{                          
     min-height: 100vh;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    &__carrousel{
-        position: absolute;
-        background-repeat: no-repeat;
-        min-height: 100vh;
-        width: 100%;
-        height: 900px;
-        top: 0;
-        left: 0;
+    position : relative;
+    &__carrousel {
+        top:0;
+        left:0;
+        position : absolute;
+        background-repeat: no-repeat ;
+        min-height : 100vh;
+        width : 100%;
         z-index: -1;
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
+        opacity:0;
+        &--active { // .hero__carrousel--active
+            opacity: 1;
+        }
     }
-   
-}
 
-.hero__carrousel.active {
-    opacity: 1;
-    z-index: -1;
-}
-.hero__titre{
-    text-shadow: 3px 3px 5px rgba(41, 155, 102,);
-}
+    &__radio{
+        position : absolute;
+        width : 100%;
+        bottom: 0;
+        display :flex;
+        justify-content: center;
+        gap: 2rem;
+       
+        &__input{}
 
-.hero__bouton {
-    background-color: rgb(129, 243, 237); 
-    border: 2px solid cyan;
-    padding: 10px 20px; 
-    color: black; 
-    font-size: 16px; 
-    border-radius: 5px; 
-    cursor: pointer; 
-}
-.hero__icone-app{
-    margin-top: 10px;
-}
-.hero__radio{
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    width: 100%;
+    }
+       
+
+
 }
