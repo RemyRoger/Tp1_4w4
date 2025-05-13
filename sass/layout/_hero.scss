@@ -1,32 +1,38 @@
-.hero{                          
+.hero {
     min-height: 100vh;
-    position : relative;
+    position: relative;
+  
     &__carrousel {
-        top:0;
-        left:0;
-        position : absolute;
-        background-repeat: no-repeat ;
-        min-height : 100vh;
-        width : 100%;
-        z-index: -1;
-        opacity:0;
-        &--active { // .hero__carrousel--active
-            opacity: 1;
-        }
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 100vh;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      pointer-events: none; // pour que le texte reste cliquable
+      z-index: 0;
+  
+      &--active {
+        opacity: 1;
+      }
     }
-
-    &__radio{
-        position : absolute;
-        width : 100%;
-        bottom: 0;
-        display :flex;
-        justify-content: center;
-        gap: 2rem;
-       
-        &__input{}
-
+  
+    &__contenu {
+      position: relative;
+      z-index: 1; // le texte passe au-dessus des carrousels
     }
-       
-
-
+  
+    &__radio {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 2; // pour que les boutons radio restent visibles
+    }
 }

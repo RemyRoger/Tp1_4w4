@@ -1,10 +1,22 @@
-<?php  
-$hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); 
+<?php
+    $hero_auteur = get_theme_mod('hero_auteur', 'Default Title');
+    $hero_courriel = get_theme_mod('hero_courriel','Default Title');
+    for ($k=0; $k<3; $k++){
+    $hero_background[$k] = get_theme_mod('hero_background_' . $k, 'Default Title');
+    }
+    $couleur = substr(get_theme_mod('hero_icone', '#fff'),1);
+    $couleur_texte = get_theme_mod('hero_icone', '#fff');
+
 
 for ($k=0; $k<3; $k++){
 $hero_background[$k] = get_theme_mod('hero_background_' . $k, 'Default Title'); 
 }
 ?>
+<style>
+     .hero{
+        color:  <?php echo $couleur_texte ?>;
+     }
+ </style>
 <section class="hero">
     <!-- ///////////////////////////////////////////////// hero__carrousel -->
     <div class="hero__carrousel"  style="background-image: url('<?php echo $hero_background[0] ?>');" ></div>    
@@ -25,14 +37,7 @@ $hero_background[$k] = get_theme_mod('hero_background_' . $k, 'Default Title');
             <?php  bloginfo('description'); ?>
             </p>
         </div>
-        <div class="hero__animation">
-            <h1 class="hero__titre">
-                Lorem ipsum dolor
-            </h1>
-            <p class="hero__description">
-            consectetur adipisicing elit. Dicta velit asperiores 
-            </p>
-        </div>
+        
         <a href="" class="hero__courriel">
             info@cmaisonneuve.qc.ca
         </a>
