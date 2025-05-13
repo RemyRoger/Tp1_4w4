@@ -133,8 +133,18 @@ $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'couleu
   'label' => __('Couleur du texte', 'theme_31w'),
   'section' => 'erreur_section',
 )));
+$wp_customize->add_setting('image_defaut_article', array(
+  'default' => '',
+  'sanitize_callback' => 'esc_url_raw',
+));
+
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'image_defaut_article', array(
+  'label' => __('Image par défaut des articles', 'theme_31w'),
+  'section' => 'hero_section', // ou une autre section existante
+)));
 
 }
+
 
 
 

@@ -392,36 +392,95 @@ form {
 }
 
 /*
---------------------------------- Layout du pied de page
+  --------------------------------- Layout du pied de page
 */
 footer {
-  background-color: rgb(236, 136, 13);
-  color: #000;
+  background-color: #ec880d;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .piedpage {
   display: flex;
   flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
 }
 .piedpage__s1 {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  justify-content: center;
   gap: 3rem;
+  padding: 2rem 0;
+  flex: 2;
 }
-.piedpage__s1__externe {
-  flex: 0 0 20%;
+.piedpage__s1__externe, .piedpage__s1__adresse, .piedpage__s1__description {
+  flex: 1 1 30%;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
 }
-.piedpage__s1__externe .menu {
+.piedpage__s1__externe .menu, .piedpage__s1__adresse .menu, .piedpage__s1__description .menu {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
 .piedpage__s1__adresse {
-  flex: 0 0 40%;
+  flex: 1 1 40%;
 }
 .piedpage__s1__description {
-  flex: 1 0 300px;
+  flex: 1 1 400px;
+}
+.piedpage__s2 {
+  padding: 2vh 2vw;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.piedpage__s3 {
+  display: flex;
+  justify-content: center;
 }
 
+@media (max-width: 1024px) {
+  .piedpage__s1 {
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .piedpage__s1__externe, .piedpage__s1__adresse, .piedpage__s1__description {
+    flex: 1 1 45%;
+  }
+}
+@media (max-width: 768px) {
+  .piedpage__s1 {
+    gap: 1rem;
+  }
+  .piedpage__s1__externe, .piedpage__s1__adresse, .piedpage__s1__description {
+    flex: 1 1 100%;
+  }
+  .piedpage__s2 {
+    padding: 2vh 1vw;
+    height: auto;
+  }
+  .piedpage__s3 {
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  .piedpage__s1 {
+    gap: 1rem;
+  }
+  .piedpage__s1__externe, .piedpage__s1__adresse, .piedpage__s1__description {
+    flex: 1 1 100%;
+  }
+  .piedpage__s2 {
+    padding: 2vh 0.5vw;
+  }
+}
 .hero__titre, .hero__description {
   position: relative;
   animation: anim_contenu 2s cubic-bezier(0.91, -0.59, 0.19, 1.59) forwards;
