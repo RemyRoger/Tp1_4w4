@@ -7,31 +7,34 @@
     const categorie__ul__li = document.querySelectorAll(".categorie__ul__li");
     console.log("categorie__ul__li.length", categorie__ul__li.length);
     categorie__ul__li.forEach(li => {
-        li.addEventListener("click", function() {
-            console.log(li.dataset.id);
-            categoryId = li.dataset.id;
-            apiUrl = `${domaine}/wp-json/wp/v2/posts?categories=${categoryId}`;
-            
-            // Retire la classe 'selected' de tous les éléments
-            categorie__ul__li.forEach(item => item.classList.remove("selected"));
-    
-            // Ajoute la classe 'selected' à l'élément cliqué
-            li.classList.add("selected");
-    
-            // Appelle la fonction fetch
-            mon_fetch(apiUrl);
-        });
+    if (li.dataset.id === "12") {
+        li.style.display = "none"; // Cache le bouton
+        return; // Ne continue pas avec l'ajout du event listener
+    }
+
+    li.addEventListener("click", function() {
+        console.log(li.dataset.id);
+        categoryId = li.dataset.id;
+        apiUrl = `${domaine}/wp-json/wp/v2/posts?categories=${categoryId}`;
+
+        categorie__ul__li.forEach(item => item.classList.remove("selected"));
+        li.classList.add("selected");
+        mon_fetch(apiUrl);
     });
+});
             
  
 function mon_fetch(apiUrl) {
-    fetch(apiUrl)
+     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
             const destinationList = document.querySelector('.destination__list');
-            destinationList.innerHTML = ''; // Vider la liste avant d'ajouter les nouveaux articles
+            destinationList.innerHTML = '';
 
             data.forEach(article => {
+                // Vérifie que l'article ne fait pas partie de la catégorie "populaire" (ID 5)
+                if (article.categories.includes(5)) return;
+
                 const articleElement = document.createElement('div');
                 articleElement.innerHTML = `
                     <h3 class="TitreArticleCategorie">${article.title.rendered}</h3>

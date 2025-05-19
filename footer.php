@@ -56,5 +56,14 @@
                 )); ?>
         </section>
     </div>
+    <?php
+    $footer_image = get_theme_mod('footer_image');
+    if ($footer_image) {
+        echo '<div class="footer__image-destination">';
+        echo '<img src="' . esc_url($footer_image) . '" alt="Image de destination" />';
+        echo '</div>';
+    }
+?>
+
 </footer>
 <?php wp_footer() ?>

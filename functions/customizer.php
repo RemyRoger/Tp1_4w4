@@ -162,6 +162,18 @@ $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'image_
             'type'    => 'url',
         ));
     }
+    $wp_customize->add_setting('footer_image', array(
+    'default' => '',
+    'transport' => 'refresh',
+    'sanitize_callback' => 'esc_url_raw',
+));
+
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'footer_image_control', array(
+    'label' => __('Image de destination dans le footer', 'theme_31w'),
+    'section' => 'footer_section',
+    'settings' => 'footer_image',
+)));
+
 
 }
 
