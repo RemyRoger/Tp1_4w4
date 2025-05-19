@@ -1,9 +1,3 @@
-<?php
-/**
- *  index.php est le modèle par défaut
- *  si aucun modèle peut satisfaire la requête http dans ce cas c'est index.php qui affichera le contenu de la page
- */
-?>
 <?php get_header(); ?>
 <h1>Destinations</h1>
 
@@ -12,7 +6,6 @@
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article class="populaire__article">
 
-            
             <!-- Image mise en avant ou image par défaut -->
             <div class="populaire__image">
                 <?php
@@ -28,7 +21,6 @@
                 }
                 ?>
             </div>
-
 
             <!-- Titre / Nom de la destination -->
             <h2 class="populaire__titre"><?php the_title(); ?></h2>
@@ -61,6 +53,25 @@
 
             <!-- Contenu de l’article -->
             <div class="populaire__contenu"><?php the_content(); ?></div>
+
+            <!-- Températures -->
+            <?php
+            $min = get_field('temperature_minimum');
+            $max = get_field('temperature_maximum');
+            $moy = get_field('temperature_moyenne');
+
+            if ($min || $max || $moy) :
+            ?>
+            <div class="populaire__temperatures">
+                <h3>Températures</h3>
+                <ul>
+                    <?php if ($min) : ?><li>Minimale : <?php echo esc_html($min); ?> °C</li><?php endif; ?>
+                    <?php if ($max) : ?><li>Maximale : <?php echo esc_html($max); ?> °C</li><?php endif; ?>
+                    <?php if ($moy) : ?><li>Moyenne : <?php echo esc_html($moy); ?> °C</li><?php endif; ?>
+                </ul>
+            </div>
+            <?php endif; ?>
+
         </article>
         <?php endwhile; endif; ?>
     </div>

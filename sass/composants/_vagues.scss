@@ -1,3 +1,12 @@
 .vague{
     position: relative;
 }
+.vague path {
+    animation: flotter 4s infinite ease-in-out;
+}
+
+@keyframes flotter {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+}
