@@ -35,12 +35,19 @@
                 <?php echo $footer_mission; ?>
             </div>
         </section>
-        <section class="piedpage__s2">
-                <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=000000" width="20" height="20">
-                <img src="https://s2.svgbox.net/social.svg?ic=linkedin&color=000000" width="20" height="20">
-                <img src="https://s2.svgbox.net/social.svg?ic=paypal&color=000000" width="20" height="20">
-                <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=000000" width="20" height="20">
-        </section>
+      <section class="piedpage__s2">
+    <?php 
+    $reseaux = ['facebook', 'linkedin', 'paypal', 'stackoverflow', 'github'];
+    foreach ($reseaux as $reseau) {
+        $lien = get_theme_mod("lien_$reseau");
+        if ($lien) {
+            echo '<a href="' . esc_url($lien) . '" target="_blank" rel="noopener">
+                    <img src="https://s2.svgbox.net/social.svg?ic=' . $reseau . '&color=000000" width="20" height="20" alt="' . esc_attr($reseau) . '">
+                  </a>';
+        }
+    }
+    ?>
+</section>
         <section class="piedpage__s3">
         <?php wp_nav_menu(array(
                     "menu" => "principale",

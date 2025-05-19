@@ -45,10 +45,17 @@ $hero_background[$k] = get_theme_mod('hero_background_' . $k, 'Default Title');
             Inscription
         </button>
         <div class="hero__icone-app">
-            <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=000000" width="20" height="20">
-            <img src="https://s2.svgbox.net/social.svg?ic=linkedin&color=000000" width="20" height="20">
-            <img src="https://s2.svgbox.net/social.svg?ic=paypal&color=000000" width="20" height="20">
-            <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=000000" width="20" height="20">
+            <?php 
+    $reseaux = ['facebook', 'linkedin', 'paypal', 'stackoverflow', 'github'];
+    foreach ($reseaux as $reseau) {
+        $lien = get_theme_mod("lien_$reseau");
+        if ($lien) {
+            echo '<a href="' . esc_url($lien) . '" target="_blank" rel="noopener">
+                    <img src="https://s2.svgbox.net/social.svg?ic=' . $reseau . '&color=000000" width="20" height="20" alt="' . esc_attr($reseau) . '">
+                  </a>';
+        }
+    }
+    ?>
         </div>
         <p>Auteur:<?php echo $hero_auteur;  ?></p>
         </div>

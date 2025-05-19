@@ -142,6 +142,26 @@ $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'image_
   'label' => __('Image par défaut des articles', 'theme_31w'),
   'section' => 'hero_section', // ou une autre section existante
 )));
+ // Section réseaux sociaux
+    $wp_customize->add_section('section_reseaux', array(
+        'title'    => __('Réseaux Sociaux', 'mon_theme'),
+        'priority' => 30,
+    ));
+
+    $reseaux = ['facebook', 'linkedin', 'paypal', 'stackoverflow', 'github'];
+
+    foreach ($reseaux as $reseau) {
+        $wp_customize->add_setting("lien_$reseau", array(
+            'default'   => '',
+            'sanitize_callback' => 'esc_url_raw',
+        ));
+
+        $wp_customize->add_control("lien_$reseau", array(
+            'label'   => ucfirst($reseau),
+            'section' => 'section_reseaux',
+            'type'    => 'url',
+        ));
+    }
 
 }
 
