@@ -18,3 +18,15 @@
         background-color: rgb(94, 136, 242);
     }
 }
+.descriptionArticleCategorie {
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    max-height: 0;
+}
+
+.descriptionArticleCategorie.open {
+    opacity: 1;
+}
+
+

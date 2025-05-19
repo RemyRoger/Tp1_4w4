@@ -38,7 +38,7 @@ function mon_fetch(apiUrl) {
                 const articleElement = document.createElement('div');
                 articleElement.innerHTML = `
                     <h3 class="TitreArticleCategorie">${article.title.rendered}</h3>
-                    <div class="descriptionArticleCategorie" style="display: none;">${article.excerpt.rendered}</div>
+                    <div class="descriptionArticleCategorie">${article.excerpt.rendered}</div>
                     <a href="${article.link}">Lire plus</a>
                 `;
                 destinationList.appendChild(articleElement);
@@ -47,18 +47,29 @@ function mon_fetch(apiUrl) {
             // Ajouter un event listener à chaque élément avec la classe 'TitreArticleCategorie'
             const titreElements = document.getElementsByClassName('TitreArticleCategorie');
             Array.from(titreElements).forEach(titre => {
-                titre.addEventListener('click', function() {
-                    const descriptionElement = titre.nextElementSibling; // Trouve le div correspondant à la description
-                    // Vérifie si l'élément est actuellement caché
-                    if (descriptionElement.style.display === 'none') {
-                        // Si caché, le rendre visible
-                        descriptionElement.style.display = 'block';
+                titre.addEventListener('click', function () {
+                    const desc = titre.nextElementSibling;
+
+                    if (desc.style.maxHeight) {
+                        // Déjà ouverte → referme
+                        desc.style.maxHeight = null;
+                        desc.classList.remove('open');
                     } else {
-                        // Sinon, le cacher à nouveau
-                        descriptionElement.style.display = 'none';
+                        // Ferme toutes les autres
+                        Array.from(document.getElementsByClassName('descriptionArticleCategorie')).forEach(el => {
+                            el.style.maxHeight = null;
+                            el.classList.remove('open');
+                        });
+
+                        // Ouvre celle cliquée
+                        desc.style.maxHeight = desc.scrollHeight + "px";
+                        desc.classList.add('open');
                     }
                 });
+
             });
+
+
         })
         .catch(error => console.error('Erreur lors de la récupération des articles:', error));
 }
