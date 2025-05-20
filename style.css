@@ -369,54 +369,42 @@ form {
 .burger {
   display: none;
 }
-@media screen and (max-width: 500px) {
-  .burger {
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 99;
-  }
-}
 
 .chk__burger {
   display: none;
 }
 
-.chk__burger:checked ~ .entete__nav {
-  display: flex;
-}
-
 .entete {
-  background-color: #fff6e1;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff6e1;
+  padding: 10px 20px;
 }
+
 .entete__nav {
   display: flex;
-  justify-content: flex-end;
-  position: static;
   flex-direction: row;
+  justify-content: flex-end;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 20px; /* espace entre les liens */
 }
+
+/* Affichage du bouton burger en-dessous de 500px */
 @media screen and (max-width: 500px) {
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
   .entete__nav {
     display: none;
     flex-direction: column;
-    height: 50vh;
-    width: 100vw;
-    gap: 30px 0;
-    padding-bottom: 20px;
-    gap: 30px 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #fff;
+    background-color: #fff6e1;
+  }
+  .chk__burger:checked + .entete__nav {
+    display: flex;
   }
 }
-
 /*
   --------------------------------- Layout du pied de page
 */

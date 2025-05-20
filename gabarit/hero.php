@@ -5,7 +5,7 @@
     $hero_background[$k] = get_theme_mod('hero_background_' . $k, 'Default Title');
     }
     $couleur = substr(get_theme_mod('hero_icone', '#fff'),1);
-    $couleur_texte = get_theme_mod('hero_icone', '#fff');
+    $couleur_texte = get_theme_mod('hero_icone', '#ffffff');
 
 
 for ($k=0; $k<3; $k++){
@@ -13,9 +13,14 @@ $hero_background[$k] = get_theme_mod('hero_background_' . $k, 'Default Title');
 }
 ?>
 <style>
-     .hero{
-        color:  <?php echo $couleur_texte ?>;
-     }
+    .hero {
+        color: <?php echo esc_attr($couleur_texte); ?>;
+        
+    }
+    .hero__courriel {
+        color: <?php echo esc_attr($couleur_texte); ?>;
+        
+    }
  </style>
 <section class="hero">
     <!-- ///////////////////////////////////////////////// hero__carrousel -->
@@ -41,22 +46,23 @@ $hero_background[$k] = get_theme_mod('hero_background_' . $k, 'Default Title');
         <a href="" class="hero__courriel">
             info@cmaisonneuve.qc.ca
         </a>
+
         <button class="hero__bouton">
             Inscription
         </button>
-        <div class="hero__icone-app">
-            <?php 
-    $reseaux = ['facebook', 'linkedin', 'paypal', 'stackoverflow', 'github'];
-    foreach ($reseaux as $reseau) {
-        $lien = get_theme_mod("lien_$reseau");
-        if ($lien) {
-            echo '<a href="' . esc_url($lien) . '" target="_blank" rel="noopener">
-                    <img src="https://s2.svgbox.net/social.svg?ic=' . $reseau . '&color=000000" width="20" height="20" alt="' . esc_attr($reseau) . '">
-                  </a>';
+ <div class="hero__icone-app">
+        <?php 
+        $reseaux = ['facebook', 'linkedin', 'paypal', 'stackoverflow', 'github'];
+        foreach ($reseaux as $reseau) {
+            $lien = get_theme_mod("lien_$reseau");
+            if ($lien) {
+                echo '<a href="' . esc_url($lien) . '" target="_blank" rel="noopener">
+                        <img src="https://s2.svgbox.net/social.svg?ic=' . $reseau . '&color=' . ltrim($couleur_texte, '#') . '" width="20" height="20" alt="' . esc_attr($reseau) . '">
+                    </a>';
+            }
         }
-    }
-    ?>
-        </div>
+        ?>
+</div>
         <p>Auteur:<?php echo $hero_auteur;  ?></p>
         </div>
     </section>
