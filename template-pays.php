@@ -21,18 +21,15 @@ get_header(); ?>
 <section class="rest-api">
     <h1>RESTAPI</h1>
     
+<div class="menu-pays" id="menuPays"></div>
+<div id="paysSelectionne" class="pays-selectionne"></div>
 
-    <ul class="categorie__ul">
-        <li class="categorie__ul__li selected" data-id="3">France</li>
-        <li class="categorie__ul__li" data-id="4">États-Unis</li>
-        <li class="categorie__ul__li" data-id="5">Canada</li>
-        <li class="categorie__ul__li" data-id="6">Argentine</li>
-        <li class="categorie__ul__li" data-id="7">Chili</li>
-        <li class="categorie__ul__li" data-id="8">Belgique</li>
-        <li class="categorie__ul__li" data-id="9">Maroc</li>
-        <li class="categorie__ul__li" data-id="10">Mexique</li>
-        <!-- Ajoute tous les pays que tu veux ici avec leur ID WordPress -->
-    </ul>
+<div class="destination__list"></div>
+
+
+
+<div class="destination__list"></div>
+
 
     <div class="destination__list"></div>
     <?php vague($footer_couleur_arriere); ?>

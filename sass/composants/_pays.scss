@@ -20,4 +20,39 @@
 .descriptionArticleCategorie.open {
     max-height: 500px;
 }
+.menu-pays {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.menu-pays .pays__item {
+    background-color: #FFE5C2;
+    border: 1px solid #333;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-family: sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-pays .pays__item:hover {
+    background-color: #FFD9A0;
+    transform: scale(1.05);
+}
+
+.menu-pays .pays__item.selected {
+    background-color: #FFB347;
+    font-weight: bold;
+    border-color: #000;
+}
+.pays-selectionne {
+  margin-top: 1em;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #333;
+}
 
