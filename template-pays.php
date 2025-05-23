@@ -19,19 +19,12 @@ get_header(); ?>
   <?php créer_vague('#f0f0f0', '#42f5d4'); ?>
 </section>
 <section class="rest-api">
-    <h1>RESTAPI</h1>
+    
     
 <div class="menu-pays" id="menuPays"></div>
 <div id="paysSelectionne" class="pays-selectionne"></div>
-
 <div class="destination__list"></div>
 
-
-
-<div class="destination__list"></div>
-
-
-    <div class="destination__list"></div>
     <?php vague($footer_couleur_arriere); ?>
 </section>
 
