@@ -25,9 +25,9 @@ get_header(); ?>
 <div id="paysSelectionne" class="pays-selectionne"></div>
 <div class="destination__list"></div>
 
-    <?php vague($footer_couleur_arriere); ?>
+    <?php get_footer(); ?>
 </section>
 
 
 
-<?php get_footer(); ?>
+
