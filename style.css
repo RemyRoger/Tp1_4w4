@@ -237,6 +237,12 @@ Le composant .carte
     transform: translateY(0);
   }
 }
+.contenu-pays {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 /* /////////////////////////
 Layout
 /////////////////////////// */
@@ -409,7 +415,7 @@ form {
   --------------------------------- Layout du pied de page
 */
 footer {
-  background-color: #ec880d;
+  background-color: #33ecff;
   color: #000000;
   display: flex;
   justify-content: center;

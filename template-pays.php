@@ -4,12 +4,19 @@
  */
 
 get_header(); ?>
-
-<div class="pays-container">
+<section class="contenu-editeur">
     
+  <div class="contenu-pays">
+    <h1>Pays</h1>
+    <?php
+    if (have_posts()) :
+        while (have_posts()) : the_post();
+            the_content();
+        endwhile;
+    endif;
+    ?>
+  </div>
+</section>
 
-    <div id="menu-pays"></div>
-    <div id="destinations"></div>
-</div>
 
 <?php get_footer(); ?>
