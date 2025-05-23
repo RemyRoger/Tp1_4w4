@@ -17,6 +17,7 @@
         <?php the_category() ?>
         <p>Température maximum :<?php echo the_field("temperature_maximum"); ?>°C</p>
         <p>Température minimum :<?php echo the_field("temperature_minimum"); ?>°C</p>
+        <p>Température moyenne :<?php echo the_field("temperature_moyenne"); ?>°C</p>
     </div>
 
 </article>

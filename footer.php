@@ -13,6 +13,14 @@
 
     ?>
     <div class="piedpage global">
+        <?php
+    $footer_image = get_theme_mod('footer_image');
+    if ($footer_image) {
+        echo '<div class="footer__image-destination">';
+        echo '<img src="' . esc_url($footer_image) . '" alt="Image de destination" />';
+        echo '</div>';
+    }
+?>
         <section class="piedpage__s1">
         <div class="piedpage__s1__externe">
         <h2>Nos partenaires</h2>
@@ -56,14 +64,7 @@
                 )); ?>
         </section>
     </div>
-    <?php
-    $footer_image = get_theme_mod('footer_image');
-    if ($footer_image) {
-        echo '<div class="footer__image-destination">';
-        echo '<img src="' . esc_url($footer_image) . '" alt="Image de destination" />';
-        echo '</div>';
-    }
-?>
+    
 
 </footer>
 <?php wp_footer() ?>
