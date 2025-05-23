@@ -12,3 +12,12 @@
     background-color: #42f5d4;
     padding-top: 20px;
 }
+.descriptionArticleCategorie {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+}
+.descriptionArticleCategorie.open {
+    max-height: 500px;
+}
+

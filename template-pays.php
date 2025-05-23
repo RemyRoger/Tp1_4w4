@@ -28,7 +28,10 @@ get_header(); ?>
         <li class="categorie__ul__li" data-id="5">Canada</li>
         <li class="categorie__ul__li" data-id="6">Argentine</li>
         <li class="categorie__ul__li" data-id="7">Chili</li>
-        <!-- Ajoute d'autres pays ici avec leurs vrais ID WordPress -->
+        <li class="categorie__ul__li" data-id="8">Belgique</li>
+        <li class="categorie__ul__li" data-id="9">Maroc</li>
+        <li class="categorie__ul__li" data-id="10">Mexique</li>
+        <!-- Ajoute tous les pays que tu veux ici avec leur ID WordPress -->
     </ul>
 
     <div class="destination__list"></div>
