@@ -4,6 +4,7 @@
   include_once "functions/svg.php";
   include "functions/options.php";
   include "functions/customizer.php";
+  include "functions/vaguesPays.php";
 ?>
 
 

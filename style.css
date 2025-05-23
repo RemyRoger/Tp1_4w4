@@ -243,6 +243,16 @@ Le composant .carte
   padding: 0 20px;
 }
 
+.contenu-editeur {
+  background-color: blanchedalmond;
+  padding-top: 20px;
+}
+
+.rest-api {
+  background-color: #42f5d4;
+  padding-top: 20px;
+}
+
 /* /////////////////////////
 Layout
 /////////////////////////// */
