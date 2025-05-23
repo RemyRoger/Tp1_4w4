@@ -5,7 +5,7 @@
  * 
  */
 //////permet d'afficher la page d'erreur 404.php si l'adresse n'existe pas/////
-    $page = $_GET['page'] ?? '';
+   /* $page = $_GET['page'] ?? '';
 
     if (file_exists($page . ".php")) {
         include $page . ".php";
@@ -13,7 +13,7 @@
         http_response_code(404);
         include "404.php";
         exit;
-    }
+    }*/
 ?>
     <section class="populaire">
         <div class="global">
